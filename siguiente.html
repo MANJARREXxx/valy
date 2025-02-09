@@ -1,0 +1,40 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Valy ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container love-message">
+        <p>Querida Valy, en este momento quisiera ser aquel que llene tus días de alegría. Quisiera preguntarte...</p>
+        <h2>¿Puedo ser tu novio? ❤️</h2>
+        <div class="buttons">
+            <button onclick="mostrarEfecto('si')">Sí ❤️</button>
+            <button onclick="mostrarEfecto('no')">No 😢</button>
+        </div>
+        <div id="efecto"></div>
+    </div>
+    <script>
+        function mostrarEfecto(respuesta) {
+            const efecto = document.getElementById("efecto");
+            efecto.innerHTML = "";
+            if (respuesta === 'si') {
+                for (let i = 0; i < 20; i++) {
+                    const corazon = document.createElement("span");
+                    corazon.innerHTML = "❤️";
+                    corazon.classList.add("animacion");
+                    efecto.appendChild(corazon);
+                }
+            } else {
+                for (let i = 0; i < 20; i++) {
+                    const triste = document.createElement("span");
+                    triste.innerHTML = "😢";
+                    triste.classList.add("animacion");
+                    efecto.appendChild(triste);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

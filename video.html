@@ -1,0 +1,22 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <video id="video" controls>
+        <source src="assets/video.mp4" type="video/mp4">
+    </video>
+    <div id="mensaje" class="oculto">¿Puedo ser tu novio, Valy? ❤️</div>
+    <button onclick="location.href='siguiente.html'">Continuar</button>
+    <script>
+        const video = document.getElementById("video");
+        const mensaje = document.getElementById("mensaje");
+        video.onended = function() {
+            mensaje.classList.add("mostrar");
+        };
+    </script>
+</body>
+</html>
